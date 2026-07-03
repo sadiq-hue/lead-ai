@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router";
-import { LayoutDashboard, Inbox, Users, CreditCard, TrendingUp, BarChart3, Network, Settings } from "lucide-react";
+import { LayoutDashboard, Inbox, Users, CreditCard, TrendingUp, BarChart3, Network, BookOpen, Settings, Shield } from "lucide-react";
 
 export function MainLayout() {
   const navItems = [
@@ -10,7 +10,9 @@ export function MainLayout() {
     { to: "/app/finance", icon: TrendingUp, label: "Finance" },
     { to: "/app/analytics", icon: BarChart3, label: "Analytics" },
     { to: "/app/architecture", icon: Network, label: "Architecture" },
+    { to: "/app/knowledge", icon: BookOpen, label: "Knowledge" },
     { to: "/app/settings", icon: Settings, label: "Settings" },
+    { to: "/app/admin", icon: Shield, label: "Admin" },
   ];
 
   return (
@@ -43,8 +45,10 @@ export function MainLayout() {
           </ul>
         </nav>
       </aside>
-      <main className="flex-1 overflow-auto">
-        <Outlet />
+      <main className="flex-1 min-h-0">
+        <div className="h-full">
+          <Outlet />
+        </div>
       </main>
     </div>
   );

@@ -13,6 +13,9 @@ RUN npm ci --only=production
 # Copy application files
 COPY . .
 
+# Create upload directories
+RUN mkdir -p uploads/stocks uploads/knowledge
+
 # Expose port
 EXPOSE 3001
 

@@ -12,6 +12,8 @@ import { Finance } from "./components/pages/Finance";
 import { Analytics } from "./components/pages/Analytics";
 import { Architecture } from "./components/pages/Architecture";
 import { Settings } from "./components/pages/Settings";
+import { KnowledgeBase } from "./components/pages/KnowledgeBase";
+import { Admin } from "./components/pages/Admin";
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +40,8 @@ export const router = createBrowserRouter([
       { path: "finance", Component: Finance },
       { path: "analytics", Component: Analytics },
       { path: "architecture", Component: Architecture },
+      { path: "knowledge", Component: KnowledgeBase },
+      { path: "admin", Component: Admin },
       { path: "settings", Component: Settings },
     ],
   },
@@ -68,6 +72,18 @@ export const router = createBrowserRouter([
   {
     path: "/architecture",
     element: <Navigate to="/app/architecture" replace />,
+  },
+  {
+    path: "/knowledge",
+    element: <Navigate to="/app/knowledge" replace />,
+  },
+  {
+    path: "/stocks",
+    element: <Navigate to="/app/admin" replace />,
+  },
+  {
+    path: "/admin",
+    element: <Navigate to="/app/admin" replace />,
   },
   {
     path: "/settings",
